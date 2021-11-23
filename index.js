@@ -1,11 +1,3 @@
-function pokemonAttributes(pokemon){
-    const pokemonHp = document.createElement('p')
-    pokemonHp.textContent = `HP: ${pokemon.stats[0].base_stat}\n`
-    
-    const pokemonAttack = document.createElement('p')
-    pokemonAttack.textContent = `ATTACK: ${pokemon.stats[1].base_stat}\n`
-}
-
 function createCard(pokemon) {
     const liEl = document.createElement('li')
     liEl.setAttribute('class', 'card')
@@ -43,9 +35,7 @@ function createCard(pokemon) {
 
 function createCards(){
     for(const pokemon of data) {
-        pokemonAttributes(pokemon)
         createCard(pokemon)
-        
     }
 }
 
